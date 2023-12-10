@@ -12,15 +12,12 @@ class Puzzle(DailyPuzzle):
         """
         Puzzle creation
         """
-        super().__init__(2, 1, self.go)
+        super().__init__(2, 2, self.go)
 
     def go(self):
         """
         Run puzzle
         """
-        red = 12
-        green = 13
-        blue = 14
         s = 0
         for line in self.lines:
             min_nb_r = 0
@@ -37,7 +34,7 @@ class Puzzle(DailyPuzzle):
                         min_nb_g = int(ball[:-6])
                     if ball.endswith('blue') and int(ball[:-5]) > min_nb_b:
                         min_nb_b = int(ball[:-5])
-            if min_nb_r <= red and min_nb_g <= green and min_nb_b <= blue:
-                Logger.debug("%s possible" % line_game)
-                s = s + int(line_game[5:])
+            power = min_nb_r * min_nb_g * min_nb_b
+            Logger.debug("%s power is %d" % (line_game, power))
+            s = s + power
         Logger.info("Result=%d" % s)
