@@ -10,6 +10,7 @@ class DailyPuzzle:
     """
     A class for running puzzle
     """
+
     def __init__(self, day, part, callback=_todo):
         """
         Puzzle creation

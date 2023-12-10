@@ -6,6 +6,7 @@ class Puzzle(DailyPuzzle):
     """
     A puzzle class
     """
+
     def __init__(self):
         """
         Puzzle creation
