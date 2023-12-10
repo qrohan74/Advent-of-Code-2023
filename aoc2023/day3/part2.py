@@ -12,7 +12,7 @@ class Puzzle(DailyPuzzle):
         """
         Puzzle creation
         """
-        super().__init__(3, 1, self.go)
+        super().__init__(3, 2, self.go)
 
     def look_for_part_numbers(self, row, column):
         """
@@ -48,7 +48,6 @@ class Puzzle(DailyPuzzle):
             ....428...
         Such gear configurations would not work
         """
-        lines_without_numbers = [re.sub(r'\d', '.', s) for s in self.lines]
         res = 0
         for line_index, line in enumerate(self.lines):
             # loop over the gears of the line
