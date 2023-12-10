@@ -19,6 +19,7 @@ class DailyPuzzle:
         self.part = part
         self.callback = callback
         self.lines = None
+        self.nb_lines = 0
 
     def run(self, puzzle=None):
         """
@@ -34,6 +35,7 @@ class DailyPuzzle:
         # read puzzle
         with open(puzzle, 'r') as file:
             self.lines = [line.rstrip() for line in file]
+            self.nb_lines = len(self.lines)
 
         # run
         self.callback()

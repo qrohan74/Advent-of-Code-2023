@@ -7,7 +7,7 @@ The program must be run as a module:
 
 By default, the program will use the file _puzzle\<DAY\>\_part\<PART\>.txt_ as input. You can override it using the option _-z_ :
 
-    python -m aoc2023 -d 1 -p 2 -z mypuzzle.txt
+    python -m aoc2023 -d 3 -p 1 -z aoc2023/day3/example.txt
 
 Logger level
 ------------
